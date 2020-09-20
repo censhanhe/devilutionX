@@ -16,7 +16,7 @@ namespace dvl {
 
 namespace {
 
-const SDL_Rect VIEWPORT = { 0, 114, SCREEN_WIDTH, 251 };
+const SDL_Rect VIEWPORT = { 0, 114, 640, 251 };
 const int SHADOW_OFFSET_X = 2;
 const int SHADOW_OFFSET_Y = 2;
 const int LINE_H = 22;

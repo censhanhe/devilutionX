@@ -106,12 +106,12 @@ void DrawCircleMenuHint(const CircleMenuHint &hint, int x, int y)
 }
 
 const int kCircleMarginX = 16;
-const int kCirclesTop = PANEL_TOP - 76;
 
 void DrawStartModifierMenu()
 {
 	if (!start_modifier_active)
 		return;
+	const int kCirclesTop = PANEL_TOP - 76;
 	static const CircleMenuHint kDpad(/*is_dpad=*/true, /*top=*/"Menu", /*right=*/"Inv", /*bottom=*/"Map", /*left=*/"Char");
 	static const CircleMenuHint kButtons(/*is_dpad=*/false, /*top=*/"", /*right=*/"", /*bottom=*/"Spells", /*left=*/"Quests");
 	DrawCircleMenuHint(kDpad, kCircleMarginX, kCirclesTop);
@@ -122,6 +122,7 @@ void DrawSelectModifierMenu()
 {
 	if (!select_modifier_active)
 		return;
+	const int kCirclesTop = PANEL_TOP - 76;
 	static const CircleMenuHint kSpells(/*is_dpad=*/false, "F6", "F8", "F7", "F5");
 	DrawCircleMenuHint(kSpells, SCREEN_WIDTH - kSpells.width() - kCircleMarginX, kCirclesTop);
 }
